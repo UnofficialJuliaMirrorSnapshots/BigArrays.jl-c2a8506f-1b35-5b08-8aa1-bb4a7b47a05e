@@ -74,6 +74,7 @@ end
 function encode( data::Array, coding::Type{BlosclzCoding} )
     Blosc.compress( data )
 end
+
 function decode( data::Vector{UInt8}, coding::Type{BlosclzCoding} )
     Blosc.decompress(UInt8, data)
 end
